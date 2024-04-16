@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+
+    body{
+        background-color: #FCF5EB;
+    }
+    .navbar{
+        overflow: hidden;
+        display: flex;
+        border: 1px #0000000b solid;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        top: 0;
+        position: fixed;
+        background-color: #fcf5ebbc;
+        backdrop-filter: blur(5px);
+        padding: 15px 40px;
+        z-index: 2;
+
+    }
+   .nav-items li{
+        display: inline-block;
+        padding: 0px 25px;
+   }
+   .nav-items li a{
+        text-decoration: none;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        color: #1c1e21;     
+   }
+   .button button{
+        height: 50px;
+        width: 150px;
+        border: 1px solid #1c1e21;
+        border-radius: 50px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        background-color: rgb(91, 210, 91);
+        color: #1c1e21;
+   }
+   .button button i{
+    position: absolute;
+    color: #1c1e21;
+    background-color: rgb(91, 210, 91);
+    right: 40px;
+    top: 40%;
+    transform: translate(-50%);
+    font-size: 20px;
+   }
+   .back-image{
+    margin:110px 30px;
+    padding: 20px;
+    height: 100vh;
+    border-radius: 25px;
+    background-image: url(bigpic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .text-block{
+    height: 60vh;
+    width: 25vw;
+    padding:10px 20px;
+    line-height: 1.3;
+    background-color: transparent;
+    transform: translate(40%,35%);
+    font-family: Helvetica, Arial, sans-serif;
+   }
+   .text-block p{
+    font-size: 20px;
+    padding-bottom: 60px;
+    background-color: transparent;
+    color: #fff;
+   }
+   .text-block button{
+        height: 50px;
+        width: 150px;
+        border: 1px solid #1c1e21;
+        border-radius: 50px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 17px;
+        background-color: rgb(91, 210, 91);
+        color: #1c1e21;
+        border: none;
+   }
+   .text-block button i{
+    color: #1c1e21;
+    background-color: rgb(91, 210, 91);
+    font-size: 20px;
+   }
+   .text-images{
+    position: absolute;
+    display: inline-block;
+    background-color: transparent;
+    height: 60vh;
+    width: 30vw;
+    left: 35%;
+    transform: translate(90%,-90%);
+   }
+   .text-images img{
+    background-color: transparent;
+   }
+   .container{
+      width: 100%;
+      padding:0 60px;
+   }
+   .container img{
+    width: 100%;
+   }
+   .container h2{
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 44px;
+    color: #000;
+    line-height: 44px;
+    letter-spacing: -1px;
+    font-weight: 100;
+    margin: 0px 120px;
+    padding:15px 150px;
+    text-align: center;
+   }
+
+   .container1{
+    display: flex;
+    padding: 70px 0px;
+    width: 60vw;
+    transform: translate(30%,0%) ;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .textBox{
+    color: #000000d5;
+    width: 30vw;
+    height: 80vh;
+    line-height: 1.5;
+    font-size: 18px;
+    transform: translate(0%,15%);
+    font-family: Helvetica, Arial, sans-serif;
+   }
+   .textBox p{
+    padding-bottom: 20px;
+   }
+   .container1 a{
+    display: flex;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000000d5;
+    font-size: 16px;
+    text-decoration: none;
+   }
+   .ancText{
+     border-bottom: 2px green solid;
+     padding-right: 10px;
+   }
+   .textBox i{
+    font-size: 25px;
+   }
+   .container2{
+    width: 100%;
+    background-color: #000;
+   }
+   .innerBlock{
+    display: flex;
+    padding: 70px 0px;
+    width: 90vw;
+
+    align-items: center;
+    justify-content: space-between;
+   }
+   .textBox2{
+    color: #fff;
+   }
+   .textBox2 h2{
+    font-size: 60px; 
+    background-color: transparent;
+    font-weight: 100;
+    line-height: 1;
+    padding-bottom:15px ;
+   }
+
+   #grou{
+    z-index: 1;
+    position: absolute;
+    top:20%;
+    left: 59%;
+    transform: translate(30% 0%);
+    
+   }
+
+   .footer{
+    border: 1px #fff solid;
+    background-color: #1c1e21;
+    display: flex;
+    padding: 70px;
+    align-items: center;
+    justify-content: center;
+   }
+  
+   .foot img{
+    margin-bottom: 40px;
+   }
+   
+   .foot button{
+    margin-top: 70px;
+   }
+   .foot-column{
+    color: #fff;
+    padding: 50px;
+    font-family: Helvetica, Arial, sans-serif ;
+   }
+   
+   .question p{
+      font-size: 15px;
+      padding-left: 25px;
+   }
+
+   .column-containt {
+    padding: 20px;
+   }
+
+   .column-containt li{
+      list-style: none;
+      font-size: 18px;
+      padding: 10px;
+      font-weight: 400;
+      line-height: 22px;
+   }
+</style>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                      <a href="#"><img src="logo.png" alt="" class="logo-img" height="30px"></a>
+                </div>
+
+                <ul class="nav-items">
+                    <li><a href="#">Features<i class='bx bx-chevron-down'></i></a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">For Business</a></li>
+                    <li><a href="#">Whatsapp Web</a></li>
+                    <li><a href="#">Download</a></li>
+                </ul>
+
+                <div class="button">
+                    <button>
+                           Download
+                           <i class='bx bx-down-arrow-alt'></i>
+                    </button>
+                </div>
+
+            </nav>
+        </header>
+    </div>
+
+    <div class="back-image">
+
+        <div class="text-block">
+            <p><span style="font-size: 80px; background-color: transparent;">Message privately</span>
+              Simple, reliable, private messaging and calling for free*, available all over the world.</p>
+              <button>Download 
+                <i class='bx bx-down-arrow-alt'></i>
+              </button>
+        </div>
+
+        <div class="text-images">
+            <img src="text.png" alt="" style="height: 40px;">
+            <img src="coffee.png" alt="" style="height: 100px;">
+            <img src="voicemsg.png" alt="" style="height: 60px;">
+            <img src="smallpic.png" alt="" style="height: 250px;">
+            <img src="textmsg.png" alt="" style="height: 60px;">
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <img src="image2.png" alt="">
+        <div id="msg">
+           <h2>With private messaging and calling, you can be yourself, speak freely and feel close to the most important people in your life no matter where they are.</h2>
+        </div>
+        <img src="image3.png" alt="">
+    </div>
+
+
+    <div class="container1">
+
+            <div class="textBox">
+                <p><span style="font-size: 60px; background-color: transparent;font-weight: 500;line-height: 1;padding-bottom:15px ;">Never miss a moment with voice and video calls</span><br>
+                    From a group call to classmates to a quick call with mom, feel like you’re in the same room with voice and video calls.
+                    
+                </p>
+                <div>
+                    <a href="#">
+                        <div class="ancText">Learn More</div>
+                        <i class='bx bx-chevron-right '></i></a>
+
+                </div>
+            </div>
+            <img src="call1.png" alt="">
+
+    </div>
+
+
+    <div class="container2">
+        <div class="container1" style="width: 65vw; position: relative;">
+            
+        <img src="chatimg.png" alt="">
+
+         <div class="textBox" style="color: #fff; padding-left:5%;">
+            <h2 style="font-size: 60px; background-color: transparent;font-weight: 500;line-height: 1;padding-bottom:15px ;">Speak<br><span style="color: rgb(91, 210, 91);">freely</span> </h2>
+            <p>
+                With end-to-end encryption, your personal messages and calls are secured. Only you and the person you're talking to can read or listen to them, and nobody in between, not even WhatsApp.
+            </p>
+
+            <div>
+                <a href="#" style="color: #fff;">
+                    <div class="ancText">Learn More</div>
+                    <i class='bx bx-chevron-right '></i></a>
+            </div>
+
+           </div>
+
+        </div>
+        
+    </div>
+
+
+    <div class="container1">
+
+        <div class="textBox">
+            <p><span style="font-size: 60px; background-color: transparent;font-weight: 500;line-height: 1;padding-bottom:15px ;">Keep in touch with your groups</span><br>
+                Whether it's planning an outing with friends or simply staying on top of your family chats, group conversations should feel effortless.
+                
+            </p>
+            <div>
+                <a href="#">
+                    <div class="ancText">Learn More</div>
+                    <i class='bx bx-chevron-right '></i></a>
+
+            </div>
+        </div>
+        <div class="groupChat">
+            <img src="grou.png" alt="" id="grou" >
+            <img src="groupchat.png" alt="" style="position: relative;">
+        </div>
+    </div>
+
+
+    <div class="container1">
+        <img src="girlPhoto.png" alt="">
+        <div class="textBox">
+            <p><span style="font-size: 60px; background-color: transparent;font-weight: 500;line-height: 1;padding-bottom:15px ;">Say what <br>you feel</span><br>
+                Express yourself without words. Use stickers and GIFs or share everyday moments on Status. Record a voice message for a quick hello or a longer story.
+                
+            </p>
+            <div>
+                <a href="#">
+                    <div class="ancText">Learn More</div>
+                    <i class='bx bx-chevron-right '></i></a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container1">
+
+        <div class="textBox">
+            <p><span style="font-size: 60px; background-color: transparent;font-weight: 500;line-height: 1;padding-bottom:15px ;">Transform <br>your business</span><br>
+                WhatsApp Business helps you reach your customers globally to deliver compelling experiences at scale. Showcase your products and services, increase sales, and build relationships all with WhatsApp.
+                
+            </p>
+            <div>
+                <a href="#">
+                    <div class="ancText">Learn More</div>
+                    <i class='bx bx-chevron-right '></i></a>
+
+            </div>
+        </div>
+        <img src="app.png" alt="">
+    </div>
+
+
+    <footer class="footer">
+        <div class="foot">
+            <div>
+                <img src="whitelogo.png" alt="" style="height:40px;">
+                <div class="button">
+                    <button>Download 
+                        <i class='bx bx-down-arrow-alt'></i>
+                      </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="foot-column">
+             <div class="question">
+                 <p>What we do</p>
+            </div>
+            <div class="column-containt">
+                <ul>
+                    <li>Feature</li>
+                    <li>Blog</li>
+                    <li>Security</li>
+                    <li>For Business</li>
+                </ul> 
+            </div>
+        </div>
+
+        <div class="foot-column">
+            <div class="question">
+                <p>Who are we</p>
+           </div>
+           <div class="column-containt">
+               <ul>
+                   <li>About us</li>
+                   <li>Careers</li>
+                   <li>Brand Center</li>
+                   <li>Privacy</li>
+               </ul> 
+           </div>
+       </div>
+
+       <div class="foot-column">
+             <div class="question">
+                 <p>Use whatsapp</p>
+            </div>
+            <div class="column-containt">
+                <ul>
+                    <li>Android</li>
+                    <li>iPhone</li>
+                    <li>Mac/PC</li>
+                    <li>Whatsapp Web</li>
+                </ul> 
+            </div>
+        </div>
+        
+        <div class="foot-column">
+            <div class="question">
+                <p>Need help?</p>
+           </div>
+           <div class="column-containt">
+               <ul>
+                   <li>Contact Us</li>
+                   <li>Help Center</li>
+                   <li>Download</li>
+                   <li>Security Advisories</li>
+               </ul> 
+           </div>
+       </div>
+
+    </footer>
+</body>
+</html>
